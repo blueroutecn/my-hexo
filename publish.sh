@@ -14,5 +14,5 @@ rm -rf ../houjp.github.io/*
 cp -r public/* ../houjp.github.io/
 cd ../houjp.github.io/
 pwd
-./submit.sh "$1"
+../houjp.github.io/submit.sh "$1"
 
