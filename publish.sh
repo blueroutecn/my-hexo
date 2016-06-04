@@ -6,6 +6,8 @@
 #########################################################################
 #! /bin/bash
 
+./submit.sh "$1"
+
 hexo clean
 hexo g
 rm -rf ../houjp.github.io/*
