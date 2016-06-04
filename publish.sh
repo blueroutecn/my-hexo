@@ -12,6 +12,7 @@ hexo clean
 hexo g
 rm -rf ../houjp.github.io/*
 cp -r public/* ../houjp.github.io/
-cd ../houjp.github.io
+cd ../houjp.github.io/
+pwd
 ./submit.sh "$1"
 
