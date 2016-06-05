@@ -1,7 +1,8 @@
 ---
+layout: photo
 mathjax: true
 title: Analysis of Spark's StackOverflowError in Iterative Algorithm
-date: 2016-06-05 00:39:26
+date: 2015-10-14 19:13:39
 categories: Spark
 tags: [FQA, Spark]
 ---
@@ -13,7 +14,7 @@ Recently, I partly finished GBDT algorithm on spark. When testing its performanc
 The iterative algorithm with a large iteration times often has a long lineage and it causes a long/deep java object tree (DAG of RDD objects), which needs to be serialized as part of the task creation. When serializing, the whole object DAG needs to be traversed leading to the stackoverflow error.
 
 The lineage of the GBDT algorithm I wrote was shown below (at 4th iteration),
-<img src="img/Analysis-of-Spark-s-StackOverflowError-in-Iterative-Algorithm/1.jpg" style="display:block;margin:auto"/>
+<img src="/img/Analysis-of-Spark-s-StackOverflowError-in-Iterative-Algorithm/1.jpg" style="display:block;margin:auto"/>
 
 ## How to fix stack overflow error in iterative algorithm
 
@@ -29,10 +30,10 @@ So to deal with stackoverflow errors due to long lineage, just caching is not go
 	
 
 After added checkpointing, the lineage of the GBDT algorithm I wrote changed to (at 4th iteration):
-<img src="img/Analysis-of-Spark-s-StackOverflowError-in-Iterative-Algorithm/2.png" style="display:block;margin:auto"/>
+<img src="/img/Analysis-of-Spark-s-StackOverflowError-in-Iterative-Algorithm/2.png" style="display:block;margin:auto"/>
 
 
-##Demo of Checkpointing
+## Demo of Checkpointing
 
 ```
 /* set checkpointing directory */
