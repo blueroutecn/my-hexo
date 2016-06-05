@@ -1,7 +1,7 @@
 ---
 mathjax: true
 title: Scala运算符详解
-date: 2016-01-09 22:11:30 2016
+date: 2016-01-09 22:11:30
 categories: Scala
 tags: [Scala]
 ---
