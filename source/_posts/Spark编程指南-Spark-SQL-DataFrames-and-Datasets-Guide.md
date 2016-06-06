@@ -1,6 +1,6 @@
 ---
 mathjax: true
-title: '<Spark编程指南> Spark SQL, DataFrames and Datasets Guide'
+title: '<Spark编程指南>Spark SQL, DataFrames and Datasets Guide'
 date: 2016-06-06 08:40:43
 categories: Spark
 tags: [Spark]
