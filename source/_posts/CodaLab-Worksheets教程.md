@@ -6,6 +6,7 @@ categories: MLP
 tags: [MLP]
 ---
 
+说明：译自[User_CodaLab Worksheets Tutorial](https://github.com/codalab/codalab-worksheets/wiki/User_CodaLab-Worksheets-Tutorial)
 
 ## 概述
 
