@@ -86,7 +86,7 @@ cl run sort.py:sort.py input:a.txt 'python sort.py < input' -n sort-run
 
 上述命令会在当前的worksheet中新增一个名为`sort-run`的bundle。等待几秒钟后，面板右侧会出现运行结果。如果没有，请通过`shift-r`刷新worksheet。
 
-<center>![运行命令](img/CodaLab-Worksheets教程/run-cmd.png)</center>
+<center>![运行命令](/img/CodaLab-Worksheets教程/run-cmd.png)</center>
 
 让我们来看看它是如何运转的。`cl run`的前两个参数指明了依赖，第三个参数是运行命令，运行在当前的依赖上。
 
@@ -98,7 +98,7 @@ CodeLab会捕获写入当前目录的所有文件及目录，以及stdout和stde
 <key>:<target>
 ```
 
-target可以是一个bundle（例如a.txt），也可以是一个目录作为bundle，或者bundle中的一个目录或者文件（例如a.txt/file1）。当命令（例如`python sort.py < input`）被执行的时候，是在一个（临时的）目录完成的，这个目录中有一个只读的文件/目录名为\<key\>内容为\<target\>。运行时会向当前目录写入内容来填充bundle。
+target可以是一个bundle（例如a.txt），也可以是一个目录作为bundle，或者bundle中的一个目录或者文件（例如a.txt/file1）。当命令（例如`python sort.py < input`）被执行的时候，是在一个（临时的）目录完成的，这个目录中有一个只读的文件/目录名为&lt;key&gt;内容为&lt;target&gt;。运行时会向当前目录写入内容来填充bundle。
 
 真实执行是在一台worker机器的`docker container`中进行的，你也可以指定需要的linux环境（提供需要的库和软件包）。如果你想要知道当前环境的配置，可以通过以下命令：
 
