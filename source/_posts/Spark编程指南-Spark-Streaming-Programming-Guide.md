@@ -145,11 +145,12 @@ val ssc = new StreamingContext(sc, Seconds(1))
 
 `离散流`或`DStream`是Spark Streaming提供的基本抽象数据结构。它表示一个连续的数据流，不仅包括从源接收到的输入数据流，也包括输入流经过转化生成的处理后的数据流。在Spark内部，DStream使用RDD的连续序列来表示。DStream中的每个RDD包含一个固定间隔内的数据，如下图所示。
 
-![streaming-dstream](/img/Spark编程指南-Spark-Streaming-Programming-Guide/streaming-dstream.png)
+<center>![streaming-dstream](/img/Spark编程指南-Spark-Streaming-Programming-Guide/streaming-dstream.png)</center>
 
 任何应用在DStream上的操作都会转化成对内部RDD的操作。例如，之前的例子中，将文本行的输入流切分为单词，*flatMap*操作被应用在了*lines*DStream的每个RDD中，来生成*words*DStream的RDD。如下图所示。
 
-![streaming-dstream-ops](/img/Spark编程指南-Spark-Streaming-Programming-Guide/streaming-dstream-ops.png)
+<center>![streaming-dstream-ops](/img/Spark编程指南-Spark-Streaming-Programming-Guide/streaming-dstream-ops.png)</center>
+
 
 内部RDD的转换操作由Spark引擎来完成。DStream操作隐藏了这些细节，向开发提供了更高级的API。这些操作的细节在之后的章节中介绍。
 
@@ -297,7 +298,7 @@ val cleanedDStream = wordCounts.transform(rdd => {
 
 Spark Streaming也提供了窗口化的计算方法，它允许你在一个数据的滑动窗口上完成转化操作。下图对滑动窗口进行了说明。
 
-![streaming-dstream-window](/img/Spark编程指南-Spark-Streaming-Programming-Guide/streaming-dstream-window.png)
+<center>![streaming-dstream-window](/img/Spark编程指南-Spark-Streaming-Programming-Guide/streaming-dstream-window.png)</center>
 
 如图所示，窗口随着时间在DStream上滑动，落在窗口内的源RDD被结合在一起并通过运算产生了窗口化DStream中的RDD。在上述例子中，每三个时间单位的数据会被执行一次转化操作，每两个时间单位滑动一次窗口。这意味着任意的窗口操作都需要指明两个参数。
 
