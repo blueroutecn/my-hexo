@@ -4,7 +4,7 @@
 # mail: houjp1992@gmail.com
 # Created Time: 三  9/16 21:58:46 2015
 #########################################################################
-# !/bin/bash
+#! /bin/bash
 
 git add --all .
 git commit -m "$1"
