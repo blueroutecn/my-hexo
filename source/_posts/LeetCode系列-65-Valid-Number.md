@@ -50,7 +50,7 @@ tags: [字符串]
 ##	代码实现
 
 
-```
+```c++
 class Solution {
 public:
     bool isNumber(string s) {
