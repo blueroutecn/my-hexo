@@ -12,7 +12,7 @@ tags: [字符串]
 
 ##	问题描述
 
-[LeetCode | 65. Valid Number](https://leetcode.com/problems/valid-number/)
+(原题链接：[LeetCode | 65. Valid Number](https://leetcode.com/problems/valid-number/))
 
 判断给定的字符串是否为数字类型。如下所示：
 
