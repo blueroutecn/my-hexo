@@ -14,6 +14,7 @@ hexo g
 
 echo "[`date`] [INFO] 删除过时文件"
 rm -rf ../houjp.github.io/*
+echo $?
 echo "[`date`] [INFO] 拷贝新文件"
 cp -r public/* ../houjp.github.io/
 cp CNAME ../houjp.github.io/
