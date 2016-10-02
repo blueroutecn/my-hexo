@@ -3,7 +3,7 @@ mathjax: true
 title: 白话LeetCode | 8. String to Integer (atoi)
 date: 2016-10-02 15:28:36
 categories: 白话LeetCode
-tags: [字符串]
+tags: [String]
 ---
 
 
